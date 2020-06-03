@@ -7,13 +7,16 @@ class SimpleMap extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {lat: this.setState.lat, long: this.setState.long}
+        this.state = {
+            center: {
+                lat: parseFloat(this.props.lat),
+                lng: parseFloat(this.props.long)
+            }
+        }
     }
 
-
-
     static defaultProps = {
-        center: {lat: this.props.lat, lng: this.props.long}
+        center: {lat: 10, lng: 10}
     }
 
     render() {
@@ -21,12 +24,13 @@ class SimpleMap extends Component {
             <div style={{ height: '100vh', width: '100%' }}>
                 <GoogleMapReact
                     bootstrapURLKeys={{ key: API_KEY}}
-                    defaultCenter={this.props.center}
-                    defaultZoom={1}
+
+                    center={ this.state.center }
+                    defaultZoom={5}
                 >
                     <AnyReactComponent
-                        lat={this.props.lat}
-                        lng={this.props.long}
+                        lat={this.state.center.lat}
+                        lng={this.state.center.lng}
                         text="theISS"
                     />
                 </GoogleMapReact>
