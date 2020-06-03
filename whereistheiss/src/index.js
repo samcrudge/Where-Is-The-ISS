@@ -12,17 +12,19 @@ class Routing extends React.Component {
         return (
             <Router>
                 <div>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                            <Link to="/map">maps</Link>
-                        </li>
-                    </ul>
-                    <Switch>
-                        <Route exact path="/" component={ ISS }/>
-                        <Route exact path="/map" component={ MapIss }/>
-                        <Route component={ NotFound }/>
-                    </Switch>
+                    <nav>
+                        <ul>
+                            <li>
+                                <Link to="/">Home</Link>
+                                <Link to="/map">maps</Link>
+                            </li>
+                        </ul>
+                        <Switch>
+                            <Route exact path="/" component={ISS}/>
+                            <Route exact path="/map" component={MapIss}/>
+                            <Route component={NotFound}/>
+                        </Switch>
+                    </nav>
                 </div>
             </Router>
         )
@@ -30,7 +32,7 @@ class Routing extends React.Component {
 }
 
 ReactDOM.render(
-    <Routing />,
+    <Routing/>,
     document.getElementById('root')
 );
 

@@ -1,3 +1,7 @@
-text {
-    color: pink;
+.Gmap {
+    padding-right: 100%;
+}
+
+div {
+    border-radius: 15px;
 }

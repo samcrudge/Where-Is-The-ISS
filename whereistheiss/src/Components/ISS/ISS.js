@@ -15,7 +15,7 @@ class ISS extends React.Component {
     componentDidMount() {
         this.Timer = setInterval(
             () => this.GetIssLocationNow(),
-            500000
+            60000*2
         )
     }
 
@@ -34,10 +34,7 @@ class ISS extends React.Component {
 
     render() {
         return (
-            <div>
-                { this.state.iss_position.longitude }
-            </div>,
-            <DisplayIss messege={ this.state.message } timestamp={ this.state.timestamp } iss_position={ this.state.iss_position } />
+            <DisplayIss update={ this.GetIssLocationNow } messege={ this.state.message } timestamp={ this.state.timestamp } iss_position={ this.state.iss_position } />
         )
     }
 }
