@@ -1,6 +1,6 @@
 import React from "react";
 import './DisplayIss.css'
-import SimpleMap from "./Maptest/Maptest";
+import SimpleMap from "./Map/Map";
 
 
 class DisplayIss extends React.Component {
@@ -13,7 +13,7 @@ class DisplayIss extends React.Component {
                 <p> Timestamp: {this.props.timestamp}</p>
                 <p> Longitude: {this.props.iss_position.longitude}</p>
                 <p> Latitude: {this.props.iss_position.latitude}</p>
-                <p> Refresh: <button onClick={this.props.update }> Refresh!</button></p>
+                <p><button onClick={this.props.update }> Refresh!</button></p>
                 <SimpleMap long={this.props.iss_position.longitude} lat={this.props.iss_position.latitude}/>
             </div>
         )

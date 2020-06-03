@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import GoogleMapReact from 'google-map-react';
-import './Maptest.css'
+import './Map.css'
 
-const AnyReactComponent = ({text}) => <div>{text}</div>;
+const AnyReactComponent = ({text}) => <div><img style={{width: '50px', height: '50px'}} src={text} alt="fuckyou"/></div>;
 const API_KEY = 'AIzaSyAGnvsBR2n98t2u923hLJb0feaXb8kXxFs';
-const icon = '.'
 
-class SimpleMap extends Component {
+
+class GoogleMaps extends Component {
 
     constructor(props) {
         super(props);
@@ -42,7 +42,7 @@ class SimpleMap extends Component {
                     <AnyReactComponent
                         lat={this.state.center.lat}
                         lng={this.state.center.lng}
-                        text="theISS"
+                        text="https://cdn4.iconfinder.com/data/icons/astronomy-and-space-outline-style/512/spase-05-512.png"
                     />
                 </GoogleMapReact>
             </div>
@@ -50,4 +50,4 @@ class SimpleMap extends Component {
     }
 }
 
-export default SimpleMap;
+export default GoogleMaps;
