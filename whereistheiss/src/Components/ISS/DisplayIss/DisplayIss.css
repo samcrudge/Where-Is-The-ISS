@@ -9,13 +9,13 @@ body{
     font-size: 62.5%;
 }
 .IssInfo {
-    padding: 30px;
+    padding: 15px;
     color: white;
     font-family: 'Space Mono', monospace;
     text-align: center;
     text-shadow: #282c34;
     letter-spacing: 0.5px;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
