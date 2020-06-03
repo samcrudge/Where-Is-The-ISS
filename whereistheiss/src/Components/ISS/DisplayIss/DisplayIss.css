@@ -1,7 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+body{
+    background-image: url('https://wallpaperaccess.com/full/17520.jpg');
+    background-size: cover;
+
+
+
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
 .IssInfo {
     margin: 0 15% 0 15%;
-    border: 5px solid black;
     padding: 30px;
-    background: black;
     color: white;
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+    text-shadow: #282c34;
+
 }
+
+
+button {
+    border-radius: 25px;
+    padding: 5px;
+    font-family: 'Space Mono', monospace;
+    border-style: solid;
+    border-color: #ffffff;
+}
+

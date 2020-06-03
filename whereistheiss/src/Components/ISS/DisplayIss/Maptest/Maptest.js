@@ -4,6 +4,7 @@ import './Maptest.css'
 
 const AnyReactComponent = ({text}) => <div>{text}</div>;
 const API_KEY = 'AIzaSyAGnvsBR2n98t2u923hLJb0feaXb8kXxFs';
+const icon = '.'
 
 class SimpleMap extends Component {
 
@@ -31,7 +32,7 @@ class SimpleMap extends Component {
 
     render() {
         return (
-            <div className="Gmap" style={{height: '50vh', width: '50', padding: '0 25% 0'}}>
+            <div className="Gmap" style={{height: '60vh', width: '70%', padding: '0 15% 0'}}>
                 <GoogleMapReact
                     bootstrapURLKeys={{key: API_KEY}}
 
