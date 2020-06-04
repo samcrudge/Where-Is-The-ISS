@@ -11,9 +11,6 @@ class Routing extends React.Component {
     render() {
         return (
             <div>
-                <header>
-
-                </header>
                 <Router>
                     <div>
                         <Switch>
