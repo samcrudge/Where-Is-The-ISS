@@ -15,12 +15,12 @@ class ISS extends React.Component {
     componentDidMount() {
         this.Timer = setInterval(
             () => this.GetIssLocationNow(),
-            60000*2
+            60000
         )
     }
 
     GetIssLocationNow = () => {
-        fetch('http://api.open-notify.org/iss-now.json')
+        fetch('http://localhost:1234/Where-Is-The-ISS/whereistheiss/IssLocation.php')
             .then(location=>location.json())
             .then((location)=> {
                 this.setState( {
