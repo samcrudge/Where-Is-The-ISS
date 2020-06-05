@@ -32,7 +32,7 @@ class GoogleMaps extends Component {
 
     render() {
         return (
-            <div className="Gmap" style={{height: '60vh', width: '70%', padding: '0 15% 0'}}>
+            <div className="gmap" style={{height: '60vh', width: '70%', padding: '0 15% 0'}}>
                 <GoogleMapReact
                     bootstrapURLKeys={{key: API_KEY}}
 

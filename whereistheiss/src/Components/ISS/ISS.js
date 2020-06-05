@@ -1,6 +1,7 @@
 import React from "react";
 import DisplayIss from "./DisplayIss/DisplayIss";
-
+import GetLocationPass from "./GetLocationPass/GetLocationPass";
+import './ISS.css'
 class ISS extends React.Component {
     constructor(props) {
         super(props)
@@ -21,12 +22,15 @@ class ISS extends React.Component {
 
     GetIssLocationNow = () => {
         fetch('http://localhost:1234/Where-Is-The-ISS/whereistheiss/IssLocation.php')
-            .then(location=>location.json())
-            .then((location)=> {
-                this.setState( {
+            .then(location => location.json())
+            .then((location) => {
+                this.setState({
                     messege: location.message,
                     timestamp: location.timestamp,
-                    iss_position: {"latitude": location.iss_position.latitude, "longitude": location.iss_position.longitude}
+                    iss_position: {
+                        "latitude": location.iss_position.latitude,
+                        "longitude": location.iss_position.longitude
+                    }
                 })
                 console.log(location);
             })
@@ -34,7 +38,14 @@ class ISS extends React.Component {
 
     render() {
         return (
-            <DisplayIss update={ this.GetIssLocationNow } messege={ this.state.message } timestamp={ this.state.timestamp } iss_position={ this.state.iss_position } />
+            <div className='IssInfo'>
+                <h1>The International Space Station</h1>
+                <div className="flexthis">
+                    <GetLocationPass />
+                    <DisplayIss update={this.GetIssLocationNow} timestamp={this.state.timestamp} iss_position={this.state.iss_position}/>
+                </div>
+
+            </div>
         )
     }
 }

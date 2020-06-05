@@ -1,4 +1,7 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST');
+header("Access-Control-Allow-Headers: X-Requested-With");
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, "http://api.open-notify.org/iss-now.json");

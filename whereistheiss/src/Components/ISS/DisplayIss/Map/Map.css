@@ -1,4 +1,7 @@
 div {
     border-radius: 15px;
-    padding-bottom: 15px;
+}
+
+.gmap {
+    padding-bottom: 20px;
 }
