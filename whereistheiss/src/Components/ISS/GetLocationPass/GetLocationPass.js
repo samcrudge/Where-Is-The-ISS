@@ -40,9 +40,10 @@ class GetLocationPass extends React.Component {
         )
         return (
             <div>
-                <div>
-                    <div>Time it will Pass {this.state.reponse}</div>
-                    <div><p>Dates and time's visible.</p>{Dates}</div>
+                <div className="PassISSParent">
+                    <div className="PassIss">
+                        <div><p>Dates and time's visible.</p>{Dates}</div>
+                    </div>
                 </div>
                 <div className="Location">
                     <button onClick={this.getLocation}>When Will It Pass Me</button>
