@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import GoogleMapReact from 'google-map-react';
 import './Map.css'
 
-const AnyReactComponent = ({text}) => <div><img style={{width: '50px', height: '50px'}} src={text} alt="fuckyou"/></div>;
-const API_KEY = 'AIzaSyAGnvsBR2n98t2u923hLJb0feaXb8kXxFs';
+const AnyReactComponent = ({text}) => <div><img style={{width: '50px', height: '50px'}} src={text} alt="ISS"/></div>;
+const API_KEY = process.env.MAP_KEY;
 
 
 class GoogleMaps extends Component {
